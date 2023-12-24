@@ -18,7 +18,7 @@ jobs:
         GITHUB_CONTEXT: ${{ toJSON(github) }}
       run: echo "$GITHUB_CONTEXT"
     - name: Submit dependency graph
-      uses: gradle/gradle-build-action@dd/dependency-review-support
+      uses: gradle/gradle-build-action@dd/artifact-lib-update
       with:
         dependency-graph: download-and-submit
         cache-disabled: true

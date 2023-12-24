@@ -17,7 +17,7 @@ jobs:
         distribution: temurin
         java-version: 11
     - name: Setup Gradle to generate and submit dependency graphs
-      uses: gradle/gradle-build-action@dd/dependency-review-support
+      uses: gradle/gradle-build-action@dd/artifact-lib-update
       with:
         dependency-graph: generate-and-submit
     - name: Run a build and generate the dependency graph which will be submitted post-job

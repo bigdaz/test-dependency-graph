@@ -19,10 +19,10 @@ jobs:
         distribution: temurin
         java-version: 11
     - name: Setup Gradle
-      uses: gradle/gradle-build-action@dd/dependency-review-support
+      uses: gradle/gradle-build-action@dd/artifact-lib-update
       with:
         cache-disabled: true
-        dependency-graph: generate
+        dependency-graph: generate-and-upload
     - name: Run ${{ matrix.task }} build ${{ matrix.version }}
       run: ./gradlew ${{ matrix.task }}
 

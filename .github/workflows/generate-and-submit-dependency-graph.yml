@@ -14,10 +14,10 @@ jobs:
         distribution: temurin
         java-version: 11
     - name: Setup Gradle
-      uses: gradle/gradle-build-action@dd/dependency-review-support
+      uses: gradle/gradle-build-action@dd/artifact-lib-update
       with:
         cache-disabled: true
-        dependency-graph: generate
+        dependency-graph: generate-and-upload
     - name: Run main build
       run: ./gradlew build
     - name: Generate dependency graph for extra-build-1
@@ -33,10 +33,10 @@ jobs:
         distribution: temurin
         java-version: 11
     - name: Setup Gradle
-      uses: gradle/gradle-build-action@dd/dependency-review-support
+      uses: gradle/gradle-build-action@dd/artifact-lib-update
       with:
         cache-disabled: true
-        dependency-graph: generate
+        dependency-graph: generate-and-upload
         arguments: help
 
   submit-graph:
@@ -44,7 +44,7 @@ jobs:
     needs: [generate-graph, generate-graph-help]
     steps:
     - name: Retrieve dependency graph artifacts and submit
-      uses: gradle/gradle-build-action@dd/dependency-review-support
+      uses: gradle/gradle-build-action@dd/artifact-lib-update
       with:
         cache-disabled: true
         dependency-graph: download-and-submit
