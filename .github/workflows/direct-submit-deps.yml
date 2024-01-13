@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: gradle/gradle-build-action@v3-beta
+    - uses: gradle/gradle-build-action@main
       with:
         gradle-home-cache-cleanup: true
         dependency-graph: generate-and-submit
@@ -22,7 +22,7 @@ jobs:
           --no-configure-on-demand
           --dependency-verification=off
           :ForceDependencyResolutionPlugin_resolveAllDependencies
-    - uses: gradle/gradle-build-action@v3-beta
+    - uses: gradle/gradle-build-action@main
       with:
         gradle-home-cache-cleanup: true
         dependency-graph: generate-and-submit
