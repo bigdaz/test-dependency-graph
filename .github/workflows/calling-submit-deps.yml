@@ -1,0 +1,12 @@
+name: Reusable workflow dependency graph
+
+on:
+  workflow_dispatch:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  call-generate-and-submit-dependency-graph:
+    uses: bigdaz/test-dependency-graph-2/.github/workflows/callable-dependency-submission.yml@main
