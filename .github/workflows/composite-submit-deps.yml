@@ -10,9 +10,6 @@ permissions:
 jobs:
   composite-generate-and-submit-dependency-graph:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        dummy: ['one', 'two']
     steps:
     - uses: actions/checkout@v4
     - uses: gradle/gradle-build-action/actions/dependency-submission@dd/dependency-submission-action
