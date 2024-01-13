@@ -10,6 +10,9 @@ permissions:
 jobs:
   composite-generate-and-submit-dependency-graph:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dummy: ['one', 'two']
     steps:
     - uses: actions/checkout@v4
     - uses: bigdaz/test-dependency-graph-2/.github/actions/dependency-submission@main
