@@ -10,3 +10,7 @@ permissions:
 jobs:
   call-generate-and-submit-dependency-graph:
     uses: bigdaz/test-dependency-graph-2/.github/workflows/callable-dependency-submission.yml@main
+  call-generate-and-submit-dependency-graph-extra-build:
+    uses: bigdaz/test-dependency-graph-2/.github/workflows/callable-dependency-submission.yml@main
+    with:
+      build-root-directory: extra-build-1

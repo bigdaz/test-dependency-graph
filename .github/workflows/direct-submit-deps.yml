@@ -21,3 +21,13 @@ jobs:
           --no-configure-on-demand
           --dependency-verification=off
           :ForceDependencyResolutionPlugin_resolveAllDependencies
+    - uses: gradle/gradle-build-action@v3-beta
+      with:
+        dependency-graph: generate-and-submit
+        generate-job-summary: true
+        build-root-directory: extra-build-1
+        arguments: |
+          --no-configuration-cache
+          --no-configure-on-demand
+          --dependency-verification=off
+          :ForceDependencyResolutionPlugin_resolveAllDependencies

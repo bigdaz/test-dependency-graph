@@ -13,3 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: bigdaz/test-dependency-graph-2/.github/actions/dependency-submission@main
+    - uses: bigdaz/test-dependency-graph-2/.github/actions/dependency-submission@main
+      with:
+        build-root-directory: extra-build-1
