@@ -22,13 +22,3 @@ jobs:
           --no-configure-on-demand
           --dependency-verification=off
           :ForceDependencyResolutionPlugin_resolveAllDependencies
-    - uses: gradle/gradle-build-action@main
-      with:
-        gradle-home-cache-cleanup: true
-        dependency-graph: generate-and-submit
-        cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
-        build-root-directory: extra-build-1
-        arguments: |
-          --no-configure-on-demand
-          --dependency-verification=off
-          :ForceDependencyResolutionPlugin_resolveAllDependencies

@@ -15,7 +15,3 @@ jobs:
     - uses: bigdaz/test-dependency-graph-2/.github/actions/dependency-submission@main
       with:
         cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
-    - uses: bigdaz/test-dependency-graph-2/.github/actions/dependency-submission@main
-      with:
-        cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
-        build-root-directory: extra-build-1
