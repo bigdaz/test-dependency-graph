@@ -15,7 +15,7 @@ jobs:
     - uses: gradle/gradle-build-action@v3-beta
       with:
         dependency-graph: generate-and-submit
-        generate-job-summary: true
+        cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
         arguments: |
           --no-configure-on-demand
           --dependency-verification=off
@@ -23,7 +23,7 @@ jobs:
     - uses: gradle/gradle-build-action@v3-beta
       with:
         dependency-graph: generate-and-submit
-        generate-job-summary: true
+        cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
         build-root-directory: extra-build-1
         arguments: |
           --no-configure-on-demand
