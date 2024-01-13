@@ -17,7 +17,6 @@ jobs:
         dependency-graph: generate-and-submit
         generate-job-summary: true
         arguments: |
-          --no-configuration-cache
           --no-configure-on-demand
           --dependency-verification=off
           :ForceDependencyResolutionPlugin_resolveAllDependencies
@@ -27,7 +26,6 @@ jobs:
         generate-job-summary: true
         build-root-directory: extra-build-1
         arguments: |
-          --no-configuration-cache
           --no-configure-on-demand
           --dependency-verification=off
           :ForceDependencyResolutionPlugin_resolveAllDependencies
