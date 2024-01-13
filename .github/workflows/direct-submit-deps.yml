@@ -17,6 +17,7 @@ jobs:
       with:
         dependency-graph: generate-and-submit
         add-job-summary: on-failure
+        cache-read-only: true
         cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
         arguments: |
           --no-configure-on-demand
