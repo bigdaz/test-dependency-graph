@@ -24,3 +24,16 @@ jobs:
           --dependency-verification=off
           --stacktrace
           :ForceDependencyResolutionPlugin_resolveAllDependencies
+    - uses: gradle/gradle-build-action@main
+      with:
+        dependency-graph: generate-and-submit
+        dependency-graph-continue-on-failure: false
+        cache-read-only: true
+        gradle-version: 8.6-rc-1
+        build-root-directory: extra-build-1
+        cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
+        arguments: |
+          --no-configure-on-demand
+          --dependency-verification=off
+          --stacktrace
+          :ForceDependencyResolutionPlugin_resolveAllDependencies
