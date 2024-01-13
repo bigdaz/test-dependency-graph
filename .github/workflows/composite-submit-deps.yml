@@ -15,10 +15,10 @@ jobs:
         dummy: ['one', 'two']
     steps:
     - uses: actions/checkout@v4
-    - uses: bigdaz/test-dependency-graph-2/.github/actions/dependency-submission@main
+    - uses: gradle/gradle-build-action/actions/dependency-submission@dd/dependency-submission-action
       with:
         cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
-    - uses: bigdaz/test-dependency-graph-2/.github/actions/dependency-submission@main
+    - uses: gradle/gradle-build-action/actions/dependency-submission@dd/dependency-submission-action
       with:
         gradle-version: 8.6-rc-1
         build-root-directory: extra-build-1
